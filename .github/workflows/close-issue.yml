@@ -1,0 +1,13 @@
+name: Close issues
+issues:
+    types: [labeled]
+
+jobs:
+  close-airtable:
+    runs-on: ubuntu-latest
+    steps:
+    - name: close-airtable
+      uses: bdougie/close-issues-based-on-label@master
+      env:
+        LABEL: "closed in airtable"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
