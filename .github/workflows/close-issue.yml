@@ -1,6 +1,7 @@
 name: Close issues
-issues:
-    types: [labeled]
+on:
+    issues:
+        types: [labeled]
 
 jobs:
   close-airtable:
